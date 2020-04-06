@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+    integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/main.css">
+    <title>Chat Javascript Mongo</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-warning">
+      <a class="navbar-brand mx-auto" href="/">Javascript Chat<a/>
+    </nav>
+
+    <div class="card col-md-4 mt-5 mx-auto" id="nickWrap">
+      <div class="card-header">
+        <h3>Ingresa tu nombre de usuario</h3>
+      </div>
+      <p id="nickError"></p>
+      <div class="card-body">
+        <form id="nickForm">
+          <input type="text" id="nickname" class="form-control"/>
+          <button class="btn btn-warning mt-2"><i class="fas fa-location-arrow"></i>Send</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container" id="contentWrap">
+      <div class="row mt-2">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <g4>let's chat</g4>
+            </div>
+            <div id="chat" class="card-body"></div>
+            <form id="message-form" class="card-footer">
+              <div class="input-group">
+                <input type="text" id="message" class="form-control"/>
+                <div class="input-group-append">
+                  <button class="btn btn-warning"><i class="fas fa-location-arrow"></i></button>
+                </div> 
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- <div class="col-md6 offset-md-1 mt-4">
+        </div> -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">
+              <h3>Users</h3>
+    
+            </div>
+            <div class="card-body">
+              <div id="usernames"></div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src = "/socket.io/socket.io.js"type="text/javascript">
+    </script>
+    <script type="text/javascript" src="./JS/main.js"></script>
+  </body>
+</html>
